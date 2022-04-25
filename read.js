@@ -16,7 +16,4 @@ process.on('uncaughtException', err => {
     process.exit(1);
 })
 
-function newFunction() {
-    return require('fs');
-}
 
