@@ -1,4 +1,5 @@
-const fs = require('fs');
+const process = require('process');
+var fs = require('fs');
 const path = require('path');
 
 

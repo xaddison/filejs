@@ -1,22 +1,22 @@
+const process = require('');process
 var fs = require('fs');
-var path = require('path');
 
-fs.readFile(path.join(__dirname), 'files', 'start.txt', 'utf8' (err, data) => {
-    if (err) throw err; 
-    console.log('Read complete');
-})
+var path = require('path');
 
 
 //write 
 
-fs.readFile(path.join(__dirname), 'files', 'write.txt', 'utf8' (err, data) => {
+fs.readFile(path.join(__dirname), 'files', 'writefile.txt', 'utf8' (err, data) => {
     if (err) throw err; 
-    console.log('Write complete');
+    console.log('\n')
+    console.log('Write #1 complete');
 })
 
 
 
 
-// exit
-Process.on('uncaughtException', err => {
-    console.error('There was an uncaught error:  ${err}');
+// Uncaught
+process.on('uncaughtException', (error) => {
+    fs.writeSync(process.stdeer.fd , error);
+    process.exit(1);
+});
